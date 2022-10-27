@@ -2,36 +2,46 @@
 :root {
   /* fonts */
   /* font-family: 'Plus Jakarta Sans', sans-serif; */
-  --ff-sans: 'Plus Jakarta Sans', sans-serif;
-  /* font sizes */
-  --fs-700: 5.5rem;
-  --fs-650: 4rem;
-  --fs-600: 2.5rem;
-  --fs-550: 2rem;
-  --fs-500: 1.25rem;
-  /* 56px - h1 desktop */
-  /* 44px - h1 tablet */
-  /* 40px - h2 desktop */
-  /* 36px - h1 mobile */
-  /* 32px - h2 tablet */
-  /* 26px - h2 mobile */
-  /* 24px - service cards - mobile/tablet/desktop */
+  --ff-sans: 'Plus Jakarta Sans', Arial, sans-serif;
+  /* font sizes *****************/
+  /* ************************** */
+  /* 56px / 3.5rem - h1 desktop */
+  --fs-800: 3.5rem;
+  /* 44px / 2.75rem - h1 tablet */
+  --fs-750: 2.75rem;
+  /* 40px / 2.5rem - h2 desktop */
+  --fs-700: 2.5rem;
+  /* 36px / 2.25rem - h1 mobile */
+  --fs-650: 2.25rem;
+  /* 32px / 2rem - h2 tablet */
+  --fs-600: 2rem;
+  /* 26px / 1.625rem - h2 mobile */
+  --fs-550: 1.625rem;
+  /* 24px / 1.5rem - service cards - mobile/tablet/desktop */
+  --fs-500: 1.5rem;
   /* body (18px, tablet/desktop */
   --fs-450: 1.125rem;
   /* body (16px, mobile) */
   --fs-400: 1rem;
   /* 14px - buttons - mobile */
+
   /* font weights */
   --fw-700: 700;
   --fw-500: 500;
 
   /* colors */
-  --clr-aqua: #66E2DC;
-  --clr-orange: #FA7453;
-  --clr-yellow: #FFB964;
-  --clr-soft-white: #FCFAF9;
-  --clr-black: #191826;
+  --clr-galactic-blue: hsla(252, 66%, 62%, 1);
+  --clr-summer-yellow: hsla(28, 89%, 67%, 1);
+  --clr-pink: hsla(0, 79%, 79%, 1);
+  --clr-light-red: hsla(7, 77%, 66%, 1);
+  --clr-cyan: hsla(172, 46%, 57%, 1);
+  --clr-dark-purple: hsl(314, 46%, 23%, 1);
+  --clr-black: hsla(0, 0%, 1%, 1);
+  --clr-medium-brown: hsla(30, 5%, 45%, 1);
+  --clr-light-cream: hsla(30, 100%, 97%, 1);
 }
+
+
 
 /*
   ************* RESET *****************************
@@ -92,9 +102,26 @@ h6 {
   display: flex;
 }
 
-.wrapper {
+.container {
   max-width: 1110px;
 }
+
+/* color backgrounds */
+.blue-bg { background: var(--clr-galactic-blue); }
+.yellow-bg { background: var(--clr-); }
+.pink-bg { background: var(--clr-); }
+.red-bg { background: var(--clr-); }
+.cyan-bg { background: var(--clr-); }
+.purple-bg { background: var(--clr-); }
+.black-bg { background: var(--clr-); }
+.brown-bg { background: var(--clr-); }
+.cream-bg { 
+  background: var(--clr-); 
+  color: var(--clr-medium-brown);
+}
+
+
+
 /* for screen-readers only */
 .sr-only {
   position: absolute;
@@ -119,6 +146,13 @@ body {
   line-height: 1.6;
   text-align: center;
 
-  background-color: var(--clr-white);
-  color: var(--clr-dark-body);
+  background-color: var(--clr-light-cream);
+  color: var(--clr-medium-brown);
 }
+
+h1, h2, h3 {
+  color: var(--clr-black);
+}
+
+
+/* Design System-specific Styles */
