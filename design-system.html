@@ -10,22 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-  <header>
+<body class="design-body">
+  <header class="header">
     <div class="container flex">
       <img src="./assets/logo.svg" alt="logo" class="logo">
       <h1>Design System</h1>
     </div>
   </header>
 
-  <main>
+  <main class="design-main">
     <div class="container design-container grid">
-
+      <!-- Color Styles -->
       <section>
-        <h2>Colors</h2>
-
-        <div class="colors-grid grid">
-
+        <h2 class="design-heading">Colors</h2>
+        <div class="colors-container">
           <div class="color">
             <div class="color-block blue-bg white-text fs-500 fw-700">
               <span>#755CDE</span>
@@ -112,19 +110,53 @@
               <p><span class="clr-format">HSL</span><span class="black-text fw-700">28°, 100%, 97%</span></p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Typography Styles -->
+      <section>
+        <h2 class="design-heading">Typography</h2>
+
+        <div class="typography-container flex">
+
+          <div class="text-type heading-text">
+            <div class="text-style">
+              <div class="text-style-details">
+                <span>Plus Jakarta Sans Bold</span><span>56px</span><span>70px Line</span>
+              </div>
+              <h1 class="fs-800">Heading (L)</h1>
+            </div>
+            <div class="text-style">
+              <div class="text-style-details">
+                <span>Plus Jakarta Sans Bold</span><span>40px</span><span>51px Line</span>
+              </div>
+              <h2 class="fs-700">Heading (M)</h2>
+            </div>
+            <div class="text-style">
+              <div class="text-style-details">
+                <span>Plus Jakarta Sans Bold</span><span>32px</span><span>40px Line</span>
+              </div>
+              <h3 class="fs-600">Heading (S)</h3>
+            </div>
+          </div>
+
+          <div class="text-type body-text">
+            <div class="text-style">
+              <div class="text-style-details">
+                <span>Plus Jakarta Sans Medium</span><span>18px</span><span>28px Line</span>
+              </div>
+              <p class="fs-450">Body (M) - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+              <br>
+              <p class="fs-450">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p>
+            </div>
+          </div>
 
         </div>
       </section>
 
+      <!-- Button Styles -->
       <section>
-        <h2>Typography</h2>
-        <div class="typography">
-
-        </div>
-      </section>
-
-      <section>
-        <h2>Interactive Elements</h2>
+        <h2 class="design-heading">Interactive Elements</h2>
         <div class="interactive-grid">
           <div class="button-type"></div>
           <div class="button-type"></div>

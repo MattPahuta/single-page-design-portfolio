@@ -169,43 +169,73 @@ body {
 
 h1, h2, h3 {
   color: var(--clr-black);
+  line-height: 1.25;
+}
+
+/* Header Styles */
+.header > .container {
+  margin-top: 3.125rem;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.header h1 {
+  font-size: var(--fs-600);
 }
 
 
 /* Design System-specific Styles */
-
+.design-body {
+  padding: 0 1em;
+}
 .design-container {
+  margin-top: 5rem;
   margin-inline: auto;
   text-align: left;
   gap: 6.5rem;
 }
 
 
-.design-container h2 {
+.design-heading {
   margin-bottom: 3rem;
   font-size: var(--fs-700);
   font-weight: var(--fw-700);
   color: var(--clr-medium-brown);
 }
 
-.colors-grid {
-  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+.colors-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.875rem;
 }
 
+.color {
+  min-width: 300px;
+  max-width: 350px;
+  flex: 1;
+}
+
 .color-block {
-  width: 350px;
-  height: 100px;
+  min-height: 100px;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   align-items: end;
-  padding-left: 24px;
-  padding-bottom: 16px;
 }
 
 .color:last-child > .color-block {
   border: 1px solid var(--clr-medium-brown);
+}
+
+.color-block > span {
+  margin: 0 0 1rem 1.5rem;
 }
 
 .color-alt-formats {
@@ -217,4 +247,41 @@ h1, h2, h3 {
 
 .clr-format {
   margin-right: 4rem;
+}
+
+/* Design - Typography */
+.typography-container {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-type {
+  display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+  flex: 1;
+}
+
+.text-style-details {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.text-style-details span:first-of-type {
+  color: var(--clr-light-red);
+  font-weight: var(--fw-700);
+}
+
+@media (min-width: 48em) {
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+  .header h1 {
+    font-size: var(--fs-700);
+  }
+  .typography-container {
+    flex-direction: row;
+  }
 }
