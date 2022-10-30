@@ -24,6 +24,7 @@
   /* body (16px, mobile) */
   --fs-400: 1rem;
   /* 14px - buttons - mobile */
+  --fs-350: 0.875rem;
 
   /* font weights */
   --fw-700: 700;
@@ -134,6 +135,7 @@ h6 {
 .fs-500 { font-size: var(--fs-500); }
 .fs-450 { font-size: var(--fs-450); }
 .fs-400 { font-size: var(--fs-400); }
+.fs-350 { font-size: var(--fs-350); }
 
 /* font weights */
 .fw-700 { font-weight: var(--fw-700); }
@@ -150,6 +152,49 @@ h6 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Components */
+
+a.button {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  border-radius: 28px;
+  padding: 8px 28px;
+  font-size: var(--fs-350);
+  font-weight: var(--fw-700);
+  line-height: 2;
+}
+
+a.btn-primary { 
+  background-color: var(--clr-black);
+}
+
+a.btn-alt {
+  background-color: var(--clr-light-red);
+}
+
+/* revisit arrow button styles during carousel implementation */
+a.arrow-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: var(--clr-black);
+}
+
+@media (min-width: 48em) {
+  a.button {
+    font-size: var(--fs-400);
+    line-height: 1.75;
+    padding: 14px 45px;
+  }
 }
 
 /* General Styles */
@@ -190,98 +235,3 @@ h1, h2, h3 {
 }
 
 
-/* Design System-specific Styles */
-.design-body {
-  padding: 0 1em;
-}
-.design-container {
-  margin-top: 5rem;
-  margin-inline: auto;
-  text-align: left;
-  gap: 6.5rem;
-}
-
-
-.design-heading {
-  margin-bottom: 3rem;
-  font-size: var(--fs-700);
-  font-weight: var(--fw-700);
-  color: var(--clr-medium-brown);
-}
-
-.colors-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.875rem;
-}
-
-.color {
-  min-width: 300px;
-  max-width: 350px;
-  flex: 1;
-}
-
-.color-block {
-  min-height: 100px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-}
-
-.color:last-child > .color-block {
-  border: 1px solid var(--clr-medium-brown);
-}
-
-.color-block > span {
-  margin: 0 0 1rem 1.5rem;
-}
-
-.color-alt-formats {
-  margin-top: .5rem;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
-.clr-format {
-  margin-right: 4rem;
-}
-
-/* Design - Typography */
-.typography-container {
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.text-type {
-  display: flex;
-	flex-direction: column;
-	gap: 2.5rem;
-  flex: 1;
-}
-
-.text-style-details {
-  margin-bottom: 0.5rem;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.text-style-details span:first-of-type {
-  color: var(--clr-light-red);
-  font-weight: var(--fw-700);
-}
-
-@media (min-width: 48em) {
-  .logo {
-    width: 64px;
-    height: 64px;
-  }
-  .header h1 {
-    font-size: var(--fs-700);
-  }
-  .typography-container {
-    flex-direction: row;
-  }
-}
