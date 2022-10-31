@@ -1,6 +1,17 @@
 /* ============================= */
 /* Design System-specific Styles */
 /* ============================= */
+.header > .container {
+  margin-top: 3.125rem;
+  /* margin-inline: auto; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: var(--fs-600);
+}
+
 .design-body {
   padding: 0 1em;
 }
