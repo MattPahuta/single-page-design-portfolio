@@ -11,48 +11,47 @@
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
 <body>
-  <header class="header">
-    <div class="container flex top-bar">
-      <img src="./assets/logo.svg" alt="logo" class="logo">
-      <a href="#" class="button btn-primary">Free Consultation</a>
-    </div>
-    <div class="intro">
-      <h1>Design solutions made easy</h1>
-      <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
-    </div>
-
+  <header class="container header">
+    <!-- <div class="container"> -->
+      <div class="flex top-bar">
+        <img src="./assets/logo.svg" alt="logo" class="logo">
+        <a href="#" class="button btn-primary">Free Consultation</a>
+      </div>
+      <div class="intro">
+        <h1>Design solutions made easy</h1>
+        <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
+      </div>
+    <!-- </div> -->
   </header>
 
-  <main>
+  <main class="main">
     <div class="container">
-
       <section id="skills" class="skills">
         <div class="skills-grid">
-
-          <div class="skill-block blue-bg graphic-design">
-            <p>Graphic Design</p>
-          </div>
-
-          <div class="skill-block yellow-bg ui-ux">
-            <p>UI/UX</p>
-          </div>
-
-          <div class="skill-block pink-bg apps">
-            <p>Apps</p>
-          </div>
-
-          <div class="skill-block red-bg illustrations">
-            <p>Illustrations</p>
-          </div>
-
-          <div class="skill-block cyan-bg photography">
-            <p>Photography</p>
-          </div>
-
-          <div class="skill-block purple-bg motion-graphics">
-            <p>Motion Graphics</p>
-          </div>
-          
+          <figure class="skill-block blue-bg graphic-design">
+            <img src="./assets/pattern-graphic-design.svg" alt="abstract graphic" class="skill-graphic">
+            <figcaption>Graphic Design</figcaption>
+          </figure>
+          <figure class="skill-block yellow-bg ui-ux">
+            <img src="./assets/pattern-ui-ux.svg" alt="abstract graphic" class="skill-graphic">
+            <figcaption>UI/UX</figcaption>
+          </figure>
+          <figure class="skill-block pink-bg apps">
+            <img src="./assets/pattern-apps.svg" alt="abstract graphic" class="skill-graphic">
+            <figcaption>Apps</figcaption>
+          </figure>
+          <figure class="skill-block red-bg illustrations">
+            <img src="./assets/pattern-illustrations.svg" alt="abstract graphic" class="skill-graphic">
+            <figcaption>Illustrations</figcaption>
+          </figure>
+          <figure class="skill-block cyan-bg photography">
+            <img src="./assets/pattern-photography.svg" alt="abstract graphic" class="skill-graphic">
+            <figcaption>Photography</figcaption>
+          </figure>
+          <figure class="skill-block purple-bg motion-graphics">
+            <img src="./assets/pattern-motion-graphics.svg" alt="abstract graphic" class="skill-graphic">
+            <figcaption>Motion Graphics</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -61,29 +60,26 @@
         <p>I love working with others to create beautiful design solutions. I've designed everything from brand illustrations to complete mobile apps. I'm also handy with a camera!</p>
         <a href="#" class="button btn-alt">Free Consultation</a>
       </section>
-
     </div>
 
+    <!-- slider section -->
     <section class="work work-slider">
       <h2>My Work</h2>
     </section>
     
-  <div class="container">
-    <section class="contact">
+    <section class="container contact">
       <h2>Book a call with me</h2>
       <p>I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>
       <a href="#" class="button btn-alt">Free Consultation</a>
     </section>
   </main>
 
-    <footer class="footer">
-      <div class="container flex footer-bar">
-        <img src="./assets/logo.svg" alt="logo" class="logo">
-        <a href="#" class="button btn-primary">Free Consultation</a>
-      </div>
-    </footer>
-
-  </div>
+  <footer class="container footer">
+    <div class="flex footer-bar">
+      <img src="./assets/logo.svg" alt="logo" class="logo">
+      <a href="#" class="button btn-primary">Free Consultation</a>
+    </div>
+  </footer>
 
   <script src="./js/app.js"></script>
 </body>
