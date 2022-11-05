@@ -9,7 +9,7 @@
   --fs-700: 2.25rem;
   /* 26px / 1.625rem - h2 mobile */
   --fs-600: 1.625rem;
-  /* 24px / 1.5rem - service cards - mobile/tablet/desktop */
+  /* 24px / 1.5rem - skill cards - mobile/tablet/desktop */
   --fs-500: 1.5rem;
   /* body (16px, mobile) */
   --fs-400: 1rem;
@@ -119,6 +119,7 @@ h6 {
 .container {
   max-width: 1110px;
   margin-inline: auto;
+  padding: 1em 1em 2em;
 }
 
 /* color backgrounds */
@@ -228,26 +229,10 @@ body {
   color: var(--clr-medium-brown);
 }
 
-.top-bar,
-.footer-bar {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-bar {
-  padding: 1rem 1rem 2rem;
-}
-
-.logo {
-  width: 48px;
-  height: 48px;
-}
-
 h1, h2, h3 {
   color: var(--clr-black);
   line-height: 1.25;
 }
-
 
 /* Typography */
 h1 {
@@ -258,15 +243,87 @@ h2 {
   font-size: var(--fs-600);
 }
 
+/* Header Styles */
+.top-bar,
+.footer-bar {
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1em 1em 2em; */
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
 
 
-@media (min-width: 44em) {
+.skills {
+  margin-bottom: 100px;
+  /* height: min(95%, 73rem); */
+
+}
+
+/* Skill blocks grid */
+.skills-grid {
+  min-height: 73rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  /* grid-template-rows: repeat(auto-fit, minmax(1fr, 182px)); */
+  gap: 1.5rem;
+}
+
+.skill-block {
+  display: flex;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.skill-block p {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-700);
+  color: var(--clr-white);
+}
+
+/* rework with span? mobile: 2cols, tablet 4cols, desktop 6cols*/
+
+.graphic-design {
+  grid-row: span 2;
+}
+
+.graphic-design,
+.illustrations,
+.photography,
+.motion-graphics {
+  grid-column: span 2;
+}
+
+/* .illustrations {
+  max-height: 158px;
+} */
+
+.ui-ux {
+
+}
+
+.apps {
+
+}
+
+.illustrations {
+
+}
+
+.photography {
+
+}
+
+.motion-graphics {
 
 }
 
 
-
-/* Header Styles */
 
 
 
