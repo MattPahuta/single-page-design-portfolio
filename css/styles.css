@@ -34,7 +34,7 @@
 
 }
 
-@media (min-width: 44em) {
+@media (min-width: 40em) {
   :root {
     /* 44px / 2.75rem - h1 tablet */
     --fs-700: 2.75rem;
@@ -42,6 +42,7 @@
     --fs-600: 2rem;
     /* body (18px, tablet/desktop */
     --fs-400: 1.125rem;
+    --fs-350: 1rem;
   }
 }
 
@@ -120,6 +121,12 @@ h6 {
   max-width: 1110px;
   margin-inline: auto;
   padding-inline: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .container {
+    padding-inline: 2.5rem;
+  }
 }
 
 /* color backgrounds */
@@ -212,9 +219,8 @@ a.arrow-btn {
   background-color: var(--clr-black);
 }
 
-@media (min-width: 44em) {
+@media (min-width: 40rem) {
   a.button {
-    font-size: var(--fs-400);
     line-height: 1.75;
     padding: 14px 45px;
   }
@@ -245,6 +251,12 @@ h1, h2, h3 {
   color: var(--clr-white);
 }
 
+@media (min-width: 40rem) {
+  body {
+    line-height: 1.5;
+  }
+}
+
 /* Typography */
 h1 {
   font-size: var(--fs-700);
@@ -257,14 +269,18 @@ h2 {
 
 /* Header Styles */
 .header {
-  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .top-bar,
 .footer-bar {
   justify-content: space-between;
   align-items: center;
-  /* padding: 1em 1em 2em; */
+}
+
+.top-bar {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 .logo {
@@ -272,10 +288,6 @@ h2 {
   height: 48px;
 }
 
-.intro,
-.main {
-  margin-top: 2rem;
-}
 
 .intro h1 {
   margin-bottom: 1rem;
@@ -283,7 +295,7 @@ h2 {
 
 .intro p {
   margin-inline: auto;
-  max-width: 80%;
+  max-width: 82%;
 }
 
 
@@ -292,12 +304,36 @@ h2 {
   margin-bottom: 6.25rem;
 }
 
-/* Services Grid */
+@media (min-width: 40rem) {
+  .header,
+  .top-bar {
+    margin-bottom: 4rem;
+  }
+  .top-bar {
+    padding-top: 2.125rem;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+  .intro h1 {
+    margin-bottom: 1.7rem;
+  }
+  .services,
+  .about {
+    margin-bottom: 7.5rem;
+  }
+}
+
+/*** Services Grid ***/
+/* ***************** */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+
+
 
 .service-block {
   display: flex;
@@ -342,6 +378,44 @@ h2 {
   grid-column: span 2;
 }
 
+@media (min-width: 40rem) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "gd gd ui-ux apps"
+      "gd gd illustrate illustrate"
+      "photo photo motion-g motion-g";
+
+  }
+
+  .graphic-design {
+    grid-area: gd;
+  }
+
+  .ui-ux,
+  .apps {
+    padding-right: 1.3125rem;
+  }
+  
+  .ui-ux {
+    grid-area: ui-ux;
+  }
+  .apps {
+    grid-area: apps;
+  }
+  .illustrations {
+    padding-right: 1.125rem;
+    grid-area: illustrate;
+  }
+  .photography {
+    grid-area: photo;
+  }
+  .motion-graphics {
+    grid-area: motion-g;
+  }
+
+}
+
 
 /* About Section */
 
@@ -364,7 +438,13 @@ h2 {
 .about-content,
 .contact-content {
   gap: 1.5rem;
+  gap: 1.625rem;
 }
+
+.about-content h2 {
+  max-width: 20ch;
+}
+
 
 /* Contact Section */
 
@@ -384,6 +464,30 @@ h2 {
 }
 
 
+@media (min-width: 40rem) {
+  .about {
+    flex-direction: row;
+    gap: 4.375rem;
+  }
+  .about-img {
+    max-width: 364px;
+    margin-left: -5.125rem;
+  }
+  .about-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .contact-content {
+    padding: 3.5rem 4.75rem 4rem;
+    gap: 1.625rem;
+  }
+  .contact-text {
+    gap: 1.8rem;
+  }
+}
+
+
+
 
 
 /* Footer */
@@ -393,4 +497,9 @@ h2 {
 
 .footer-bar {
   padding-bottom: 2rem;
+}
+@media (min-width: 40rem) {
+  .footer-bar {
+    padding-bottom: 3.5rem;
+  }
 }
