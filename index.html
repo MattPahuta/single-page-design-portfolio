@@ -9,13 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet"> 
   <!-- slider -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
   <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
 <body>
-  <!-- begin page wrapper -->
+
   <div class="container">
 
   <header class="header">
@@ -68,13 +66,12 @@
           <a href="#" class="button btn-alt">Free Consultation</a>
         </div>
       </section>
-  <!-- end page wrapper -->
+
   </div>  
 
     <!-- slider section -->
     <section class="work">
       <h2>My Work</h2>
-
       <div id="image-carousel" class="splide" aria-label="Beautiful Images">
         <div class="splide__track">
           <ul class="splide__list">
@@ -95,46 +92,16 @@
             </li>
           </ul>
         </div>
-
-        <div class="splide__arrow splide__arrows ltr arrow-buttons flex">
-          <a href="#" class="splide__arrow splide__arrow-prev arrow-btn arrow-left arrow-btn-prev">
+        <div class="splide__arrows arrow-buttons flex">
+          <button class="splide__arrow splide__arrow--prev arrow-btn">
             <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M8 0 0 8l8 8 1.687-1.687-5.121-5.12h10.241V6.807H4.566l5.121-5.12z"/></svg>
-          </a>
-          <a href="#" class="splide__arrow splide__arrow-next arrow-btn arrow-right arrow-btn-next">
+          </button>
+          <button class="splide__arrow splide__arrow--next arrow-btn">
             <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="m6.808 16 8-8-8-8-1.687 1.687 5.121 5.12H.001v2.386h10.241l-5.121 5.12z"/></svg>
-          </a>
+          </button>
         </div>
-
       </div>
-
-      <!-- <ul class="slider">
-        <li>
-          <img src="./assets/image-slide-1.jpg" alt="" class="work-slide">
-        </li>
-        <li>
-          <img src="./assets/image-slide-2.jpg" alt="" class="work-slide">
-        </li>
-        <li>
-          <img src="./assets/image-slide-3.jpg" alt="" class="work-slide">
-        </li>
-        <li>
-          <img src="./assets/image-slide-4.jpg" alt="" class="work-slide">
-        </li>
-      </ul> -->
-
-
-
-      <!-- <div class="arrow-buttons flex">
-        <a href="#" class="arrow-btn arrow-left arrow-btn-prev">
-          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M8 0 0 8l8 8 1.687-1.687-5.121-5.12h10.241V6.807H4.566l5.121-5.12z"/></svg>
-        </a>
-        <a href="#" class="arrow-btn arrow-right arrow-btn-next">
-          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="m6.808 16 8-8-8-8-1.687 1.687 5.121 5.12H.001v2.386h10.241l-5.121 5.12z"/></svg>
-        </a>
-      </div> -->
-
     </section>
-    
 
     <section id="contact" class="contact">
       <div class="container">
@@ -157,10 +124,6 @@
 
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js" integrity="sha512-4TcjHXQMLM7Y6eqfiasrsnRCc8D/unDeY1UGKGgfwyLUCTsHYMxF7/UHayjItKQKIoP6TTQ6AMamb9w2GMAvNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
-  <!-- <script src="app.js"></script> -->
   <script src="./js/app.js"></script>
 </body>
 </html>
