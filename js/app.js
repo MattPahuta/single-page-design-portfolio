@@ -1,28 +1,28 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-  slidesPerView: "auto",
-  centeredSlides: true,
 
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
+console.log('script connected')
 
-  // Navigation arrows
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
+// new Splide( '.splide' ).mount();
 
-  navigation: {
-    nextEl: '.arrow-btn-next',
-    prevEl: '.arrow-btn-prev',
-  },
+// document.addEventListener( 'DOMContentLoaded', function () {
+//   new Splide( '#image-carousel', {
+// 		cover      : true,
+//     type       : 'loop',
+//     padding    : '20%',
+//     arrows     : false,
+// 		heightRatio: 0.5,
+//   } ).mount();
+// } );
 
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-});
+// new Splide( '.splide', {
+//   type   : 'loop',
+//   padding: '20%',
+// } );
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '#image-carousel', {
+    type   : 'loop',
+    padding: '20%',
+    gap: '1rem',
+    arrows: false,
+  } ).mount();
+} );
