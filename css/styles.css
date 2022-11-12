@@ -1,25 +1,17 @@
 /* Custom properties */
 :root {
   /* fonts */
-  /* font-family: 'Plus Jakarta Sans', sans-serif; */
   --ff-sans: 'Plus Jakarta Sans', Arial, sans-serif;
   /* ****** font sizes *****************/
   /* ********************************* */
-  /* 36px / 2.25rem - h1 mobile */
   --fs-700: 2.25rem;
-  /* 26px / 1.625rem - h2 mobile */
   --fs-600: 1.625rem;
-  /* 24px / 1.5rem - skill cards - mobile/tablet/desktop */
   --fs-500: 1.5rem;
-  /* body (16px, mobile) */
   --fs-400: 1rem;
-  /* 14px - buttons - mobile */
   --fs-350: 0.875rem;
-
   /* font weights */
   --fw-700: 700;
   --fw-500: 500;
-
   /* colors */
   --clr-galactic-blue: hsla(252, 66%, 62%, 1);
   --clr-summer-yellow: hsla(28, 89%, 67%, 1);
@@ -31,16 +23,13 @@
   --clr-medium-brown: hsla(30, 5%, 45%, 1);
   --clr-light-cream: hsla(30, 100%, 97%, 1);
   --clr-white: hsla(0, 0%, 100%, 1);
-
 }
 
 @media (min-width: 40em) {
   :root {
-    /* 44px / 2.75rem - h1 tablet */
     --fs-700: 2.75rem;
-    /* 32px / 2rem - h2 tablet */
     --fs-600: 2rem;
-    /* body (18px, tablet/desktop */
+    --fs-500: 2rem;
     --fs-400: 1.125rem;
     --fs-350: 1rem;
   }
@@ -48,15 +37,10 @@
 
 @media (min-width: 72em) {
   :root {
-    /* desktop h1 (56px/3.5rem): */
     --fs-700: 3.5rem;
-    /* 40px / 2.5rem - h2 desktop */
     --fs-600: 2.5rem;
   }
 }
-
-
-
 
 /*
   ************* RESET *****************************
@@ -135,7 +119,6 @@ h6 {
   }
 }
 
-
 /* color backgrounds */
 .blue-bg { background: var(--clr-galactic-blue); }
 .yellow-bg { background: var(--clr-summer-yellow); }
@@ -151,19 +134,12 @@ h6 {
 .brown-text { color: var(--clr-medium-brown); }
 .white-text { color: var(--clr-white); }
 .red-text { color: var(--clr-light-red); }
-
 /* font sizes */
-.fs-800 { font-size: var(--fs-800); }
-.fs-750 { font-size: var(--fs-750); }
 .fs-700 { font-size: var(--fs-700); }
-.fs-650 { font-size: var(--fs-650); }
 .fs-600 { font-size: var(--fs-600); }
-.fs-550 { font-size: var(--fs-550); }
 .fs-500 { font-size: var(--fs-500); }
-.fs-450 { font-size: var(--fs-450); }
 .fs-400 { font-size: var(--fs-400); }
 .fs-350 { font-size: var(--fs-350); }
-
 /* font weights */
 .fw-700 { font-weight: var(--fw-700); }
 .fw-500 { font-weight: var(--fw-500); }
@@ -181,6 +157,7 @@ h6 {
   border: 0;
 }
 
+/* General Styles */
 body {
   min-height: 100vh;
   display: flex;
@@ -190,13 +167,34 @@ body {
   font-weight: var(--fw-500);
   line-height: 1.6;
   text-align: center;
-
   background-color: var(--clr-light-cream);
   color: var(--clr-medium-brown);
 }
 
-/* Components */
+h1, h2, h3 {
+  color: var(--clr-black);
+  line-height: 1.25;
+}
 
+.inverse-heading {
+  color: var(--clr-white);
+}
+
+h1 {
+  font-size: var(--fs-700);
+}
+
+h2 {
+  font-size: var(--fs-600);
+}
+
+@media (min-width: 40rem) {
+  body {
+    line-height: 1.5;
+  }
+}
+
+/* Components */
 a.button {
   text-decoration: none;
   display: inline-flex;
@@ -229,19 +227,15 @@ a.btn-alt:focus {
   background-color: var(--clr-summer-yellow);
 }
 
-/* revisit arrow button styles during carousel implementation */
-
 .arrow-btn {
   border: none;
   background-color: transparent;
   font-family: inherit;
   padding: 0;
   cursor: pointer;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   height: 64px;
   width: 64px;
   border-radius: 50%;
@@ -266,32 +260,6 @@ a.btn-alt:focus {
   }
 }
 
-/* General Styles */
-
-h1, h2, h3 {
-  color: var(--clr-black);
-  line-height: 1.25;
-}
-
-.inverse-heading {
-  color: var(--clr-white);
-}
-
-@media (min-width: 40rem) {
-  body {
-    line-height: 1.5;
-  }
-}
-
-h1 {
-  font-size: var(--fs-700);
-}
-
-h2 {
-  font-size: var(--fs-600);
-}
-
-
 /* Header Styles */
 .header {
   margin-bottom: 2rem;
@@ -313,14 +281,13 @@ h2 {
   height: 48px;
 }
 
-
 .intro h1 {
   margin-bottom: 1rem;
 }
 
 .intro p {
   margin-inline: auto;
-  max-width: 82%;
+  max-width: 24ch;
 }
 
 .services,
@@ -343,7 +310,9 @@ h2 {
   .intro h1 {
     margin-bottom: 1.7rem;
   }
-
+  .intro p {
+    max-width: 48ch;
+  }
   .services,
   .about {
     margin-bottom: 7.5rem;
@@ -357,11 +326,17 @@ h2 {
   .top-bar {
     margin-bottom: 4.125rem;
   }
+  .intro h1 {
+    margin-bottom: 1.5rem;
+  }
   .intro p {
-    max-width: 75%;
+    max-width: 55ch;
   }
   .services {
     margin-bottom: 8.5rem;
+  }
+  .about {
+    margin-bottom: 5.5rem;
   }
 }
 
@@ -423,18 +398,14 @@ h2 {
       "gd gd ui-ux apps"
       "gd gd illustrate illustrate"
       "photo photo motion-g motion-g";
-
   }
-
   .graphic-design {
     grid-area: gd;
   }
-
   .ui-ux,
   .apps {
     padding-right: 1.3125rem;
   }
-  
   .ui-ux {
     grid-area: ui-ux;
   }
@@ -451,7 +422,6 @@ h2 {
   .motion-graphics {
     grid-area: motion-g;
   }
-
 }
 
 @media (min-width: 72rem) {
@@ -465,9 +435,7 @@ h2 {
   .motion-graphics {
     gap: 1rem;
   }
-
 }
-
 
 /* About Section */
 
@@ -505,11 +473,6 @@ h2 {
   margin-bottom: 2rem;
 }
 
-/* .arrow-container {
-  margin: 0 auto;
-  display: flex;
-} */
-
 .arrow-buttons {
   margin: 2rem 0 6.25rem;
   justify-content: center;
@@ -536,15 +499,19 @@ h2 {
   .work h2 {
     margin-bottom: 3.5rem;
   }
-  
+
   .arrow-buttons {
     margin-top: 3.5rem;
   }
 }
 
+@media (min-width: 72rem) {
+  .arrow-buttons {
+    margin-bottom: 5.5rem;
+  }
+}
 
 /* Contact Section */
-
 .contact {
   margin-bottom: 2.5rem;
 }
@@ -570,11 +537,6 @@ h2 {
   padding-bottom: 2rem;
 }
 
-@media (min-width: 40rem) {
-  .footer-bar {
-    padding-bottom: 3.5rem;
-  }
-}
 
 @media (min-width: 40rem) {
   .about {
@@ -595,6 +557,9 @@ h2 {
   }
   .contact-text {
     gap: 1.8rem;
+  }
+  .footer-bar {
+    padding-bottom: 3.5rem;
   }
 }
 
