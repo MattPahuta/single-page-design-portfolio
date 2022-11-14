@@ -8,13 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet"> 
   <!-- slider -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Single-page design portfolio</title>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
+  <header class="header">
+    <div class="container">
       <div class="flex top-bar">
         <img src="./assets/logo.svg" alt="logo" class="logo">
         <a href="#" class="button btn-primary">Free Consultation</a>
@@ -23,9 +23,12 @@
         <h1>Design solutions made easy</h1>
         <p>With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
       </div>
-    </header>
-    <main class="main">
-      <section id="services" class="services">
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div id="services" class="services">
         <div class="services-grid">
           <figure class="service-block blue-bg graphic-design">
             <img src="./assets/pattern-graphic-design.svg" alt="abstract graphic" class="service-graphic">
@@ -52,7 +55,7 @@
             <figcaption class="service">Motion Graphics</figcaption>
           </figure>
         </div>
-      </section>
+      </div>
       <section id="about" class="about flex">
         <img src="./assets/image-amy.webp" alt="Amy smiling" class="about-img"> 
         <div class="about-content flex">
@@ -61,39 +64,43 @@
           <a href="#" class="button btn-alt">Free Consultation</a>
         </div>
       </section>
-  </div>  
+    </div>
+
     <section class="work">
       <h2 class="fs-500">My Work</h2>
-      <div id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div id="image-carousel" class="splide" role="region" aria-roledescription="carousel">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="./assets/image-slide-1.jpg" alt="Abstract design project">
+              <img src="./assets/image-slide-1.jpg" alt="Abstract design project" aria-label="slide 1 of 5">
             </li>
             <li class="splide__slide">
-              <img src="./assets/image-slide-2.jpg" alt="Abstract design project">
+              <img src="./assets/image-slide-2.jpg" alt="Abstract design project" aria-label="slide 2 of 5">
             </li>
             <li class="splide__slide">
-              <img src="./assets/image-slide-3.jpg" alt="Newspaper in foreground with abstract background">
+              <img src="./assets/image-slide-3.jpg" alt="Newspaper in foreground with abstract background" aria-label="slide 3 of 5">
             </li>
             <li class="splide__slide">
-              <img src="./assets/image-slide-4.jpg" alt="Journals stacked with vinyl records">
+              <img src="./assets/image-slide-4.jpg" alt="Journals stacked with vinyl records" aria-label="slide 4 of 5">
             </li>
             <li class="splide__slide">
-              <img src="./assets/image-slide-5.jpg" alt="Hand holding an iPhone with Amy's slogan">
+              <img src="./assets/image-slide-5.jpg" alt="Hand holding an iPhone with Amy's slogan" aria-label="slide 5 of 5">
             </li>
           </ul>
         </div>
         <div class="splide__arrows arrow-buttons flex">
           <button class="splide__arrow splide__arrow--prev arrow-btn">
+            <span class="sr-only">Go to previous slide</span>
             <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M8 0 0 8l8 8 1.687-1.687-5.121-5.12h10.241V6.807H4.566l5.121-5.12z"/></svg>
           </button>
           <button class="splide__arrow splide__arrow--next arrow-btn">
+            <span class="sr-only">Go to nex slide</span>
             <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="m6.808 16 8-8-8-8-1.687 1.687 5.121 5.12H.001v2.386h10.241l-5.121 5.12z"/></svg>
           </button>
         </div>
       </div>
     </section>
+
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-content flex">
@@ -105,7 +112,9 @@
         </div>
       </div>
     </section>
+
   </main>
+
   <footer class="footer">
     <div class="flex footer-bar container">
       <img src="./assets/logo.svg" alt="logo" class="logo">

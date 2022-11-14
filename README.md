@@ -1,6 +1,6 @@
 # Frontend Mentor - Single-page design portfolio solution
 
-This is a solution to the [Single-page design portfolio challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Single-page design portfolio challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/singlepage-design-portfolio-2MMhyhfKVo). The site features semantic HTML5 markup, use of both CSS Grid and Flexbox, CSS custom properties, and a scaleable image slider implemented with Splide.
 
 ## Table of contents
 
@@ -46,27 +46,27 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I haven't used figure and figcaption elements much outside of tutorials, but the skills grid elements of this site seemed like a good use case semantically as well as a structure that made sense to style properly.
 
-I haven't used figure and figcaption elements much outside of tutorials, but the skills grid elements of this site seemed like a good use case to put into action...
+Additionally, I used the [Splide slider library](https://splidejs.com/) for the first time to achieve the carousel/image slider under the 'My Work' section. Splide was very simple to implement and was pretty intuitive customizing the minimal code to match my design comp. 
 
-To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<figure class="service-block blue-bg graphic-design">
+  <img src="./assets/pattern-graphic-design.svg" alt="abstract graphic" class="service-graphic">
+  <figcaption class="service">Graphic Design</figcaption>
+</figure>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.service-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 
 ## Author
