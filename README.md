@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor solution page](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor solution page](https://www.frontendmentor.io/solutions/responsive-portfolio-page-using-css-grid-and-flexbox-FhcNieN2rq)
 - Live Site URL: [Live site on netlify.com](https://joyful-beijinho-fcd337.netlify.app/)
 
 ## My process
